@@ -1,23 +1,67 @@
 aid: bigpicture
+
 name: Bigpicture
-description: 'Bigpicture is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Bigpicture is a technology and services company that provides creative technical solutions for events, experiential marketing, and
+  installations worldwide. It offers broadcasting, video, display, virtual‑hybrid, and technical event management services, supporting clients
+  across multiple continents with innovative engineering and production capabilities. The company focuses on delivering premium, sustainable solutions
+  that transform creative ideas into reality, leveraging a global network of experts and cutting‑edge technology.
+
 url: https://raw.githubusercontent.com/api-evangelist/bigpicture/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Technology
+- Services
+- Events
+- Creative
+- Engineering
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bigpicture-hosts.yml
+- type: Vendors
+  url: vendors/bigpicture-vendors.yml
+- type: DomainSecurity
+  url: security/bigpicture-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bigpicture
+  url: https://ct-group.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-28'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://ct-group.com/mcp
+    status: 403
+  - url: https://equityzen.com/company/bigpicture
+    status: 403
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
